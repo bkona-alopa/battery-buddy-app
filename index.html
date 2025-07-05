@@ -35,7 +35,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
+            background: linear-gradient(135deg, #4facfe 0%, #56ab2f 100%);
             min-height: 100vh;
         }
         
@@ -63,12 +63,12 @@
         }
         
         .main-content {
-            background: linear-gradient(135deg, #f8fff8 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
             border-radius: 20px;
             padding: 40px;
             margin: 20px 0;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border: 1px solid rgba(86, 171, 47, 0.05);
+            border: 1px solid rgba(79, 172, 254, 0.05);
         }
         
         .features {
@@ -84,7 +84,7 @@
             border-radius: 15px;
             background: #f8f9fa;
             transition: transform 0.3s ease;
-            border: 1px solid rgba(86, 171, 47, 0.1);
+            border: 1px solid rgba(79, 172, 254, 0.1);
         }
         
         .feature:hover {
@@ -94,7 +94,7 @@
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #56ab2f;
+            color: #4facfe;
         }
         
         .feature h3 {
@@ -134,7 +134,7 @@
         }
         
         .screenshot-placeholder {
-            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
+            background: linear-gradient(135deg, #4facfe 0%, #56ab2f 100%);
             color: white;
             padding: 40px 20px;
             border-radius: 15px;
@@ -144,7 +144,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 8px 25px rgba(86, 171, 47, 0.3);
+            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
         }
         
         .cta {
@@ -154,7 +154,7 @@
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
+            background: linear-gradient(135deg, #4facfe 0%, #56ab2f 100%);
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -202,7 +202,7 @@
         .stat-number {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #56ab2f;
+            color: #4facfe;
             margin-bottom: 10px;
         }
         
@@ -220,6 +220,29 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+        
+        @keyframes innerGlow {
+            0% {
+                filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 4px rgba(79, 172, 254, 0.2));
+            }
+            50% {
+                filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 12px rgba(79, 172, 254, 0.6)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.4));
+            }
+            100% {
+                filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 4px rgba(79, 172, 254, 0.2));
+            }
+        }
+        
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+        }
+        
+        .logo-container img {
+            animation: innerGlow 3s ease-in-out infinite;
         }
         
         .feature {
@@ -260,9 +283,10 @@
 <body>
     <div class="container">
         <header>
-            <img src="header-logo.png" alt="Battery Buddy" style="max-width: 300px; height: auto; margin-bottom: 20px; animation: fadeInDown 1s ease-out;">
+            <div class="logo-container">
+                <img src="header-logo.png" alt="Battery Buddy" style="max-width: 300px; height: auto; margin-bottom: 20px;">
+            </div>
             <p class="subtitle">Smart Battery Management for Your Device</p>
-
         </header>
         
         <div class="main-content">
@@ -323,12 +347,12 @@
                 <p style="font-size: 0.9rem; color: #999; margin-top: 15px;">Free • No ads • Privacy focused</p>
             </div>
             
-            <div style="text-align: center; margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border: 1px solid rgba(86, 171, 47, 0.1);">
-                <h4 style="margin-bottom: 15px; color: #56ab2f;">Get Notified When We Launch!</h4>
+            <div style="text-align: center; margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border: 1px solid rgba(79, 172, 254, 0.1);">
+                <h4 style="margin-bottom: 15px; color: #4facfe;">Get Notified When We Launch!</h4>
                 <p style="color: #666; margin-bottom: 20px;">Be the first to know when Battery Buddy becomes available</p>
                 <div style="display: flex; max-width: 400px; margin: 0 auto; gap: 10px;">
                     <input type="email" placeholder="Enter your email" style="flex: 1; padding: 12px 15px; border: 1px solid #ddd; border-radius: 25px; font-size: 1rem; outline: none;">
-                    <button style="background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%); color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: transform 0.3s ease;">Notify Me</button>
+                    <button style="background: linear-gradient(135deg, #4facfe 0%, #56ab2f 100%); color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: transform 0.3s ease;">Notify Me</button>
                 </div>
                 <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">We'll only email you about the launch. No spam, ever.</p>
             </div>

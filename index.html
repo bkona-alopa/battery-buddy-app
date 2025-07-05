@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battery Buddy - Smart Battery Management</title>
+    <title>Battery Buddy - Smart Battery Management for Windows</title>
+    <meta name="description" content="Monitor and optimize your device's battery health with Battery Buddy. Get smart notifications, real-time monitoring, and battery optimization tips.">
+    <meta name="keywords" content="battery monitor, battery health, Windows app, battery optimization, Flutter app">
+    <meta name="author" content="Battery Buddy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://batterybuddy.app/">
+    <meta property="og:title" content="Battery Buddy - Smart Battery Management">
+    <meta property="og:description" content="Monitor and optimize your device's battery health with smart notifications and real-time monitoring.">
+    <meta property="og:image" content="https://batterybuddy.app/header-logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://batterybuddy.app/">
+    <meta property="twitter:title" content="Battery Buddy - Smart Battery Management">
+    <meta property="twitter:description" content="Monitor and optimize your device's battery health with smart notifications and real-time monitoring.">
+    <meta property="twitter:image" content="https://batterybuddy.app/header-logo.png">
+    
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <style>
@@ -17,7 +35,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
             min-height: 100vh;
         }
         
@@ -45,11 +63,12 @@
         }
         
         .main-content {
-            background: white;
+            background: linear-gradient(135deg, #f8fff8 0%, #ffffff 100%);
             border-radius: 20px;
             padding: 40px;
             margin: 20px 0;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(86, 171, 47, 0.05);
         }
         
         .features {
@@ -65,6 +84,7 @@
             border-radius: 15px;
             background: #f8f9fa;
             transition: transform 0.3s ease;
+            border: 1px solid rgba(86, 171, 47, 0.1);
         }
         
         .feature:hover {
@@ -74,7 +94,7 @@
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #667eea;
+            color: #56ab2f;
         }
         
         .feature h3 {
@@ -114,7 +134,7 @@
         }
         
         .screenshot-placeholder {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
             color: white;
             padding: 40px 20px;
             border-radius: 15px;
@@ -124,7 +144,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 25px rgba(86, 171, 47, 0.3);
         }
         
         .cta {
@@ -134,7 +154,7 @@
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -151,9 +171,75 @@
         
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
             color: white;
             opacity: 0.8;
+            background: rgba(0,0,0,0.1);
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #56ab2f;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .feature {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .feature:hover::before {
+            left: 100%;
         }
         
         @media (max-width: 768px) {
@@ -174,8 +260,9 @@
 <body>
     <div class="container">
         <header>
-            <img src="header-logo.png" alt="Battery Buddy" style="max-width: 300px; height: auto; margin-bottom: 20px;">
+            <img src="header-logo.png" alt="Battery Buddy" style="max-width: 300px; height: auto; margin-bottom: 20px; animation: fadeInDown 1s ease-out;">
             <p class="subtitle">Smart Battery Management for Your Device</p>
+
         </header>
         
         <div class="main-content">
@@ -227,9 +314,33 @@
                 </div>
             </div>
             
+
+            
             <div class="cta">
                 <h3 style="margin-bottom: 20px;">Ready to Optimize Your Battery Life?</h3>
-                <a href="#" class="cta-button">Download from Microsoft Store</a>
+                <p style="color: #666; margin-bottom: 25px;">Experience smart battery management with Battery Buddy</p>
+                <a href="#" class="cta-button">Coming Soon to Microsoft Store</a>
+                <p style="font-size: 0.9rem; color: #999; margin-top: 15px;">Free • No ads • Privacy focused</p>
+            </div>
+            
+            <div style="text-align: center; margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border: 1px solid rgba(86, 171, 47, 0.1);">
+                <h4 style="margin-bottom: 15px; color: #56ab2f;">Get Notified When We Launch!</h4>
+                <p style="color: #666; margin-bottom: 20px;">Be the first to know when Battery Buddy becomes available</p>
+                <div style="display: flex; max-width: 400px; margin: 0 auto; gap: 10px;">
+                    <input type="email" placeholder="Enter your email" style="flex: 1; padding: 12px 15px; border: 1px solid #ddd; border-radius: 25px; font-size: 1rem; outline: none;">
+                    <button style="background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%); color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: transform 0.3s ease;">Notify Me</button>
+                </div>
+                <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">We'll only email you about the launch. No spam, ever.</p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                <h4 style="margin-bottom: 15px;">System Requirements</h4>
+                <ul style="list-style: none; text-align: left; max-width: 500px; margin: 0 auto;">
+                    <li>✅ Windows 10 or later</li>
+                    <li>✅ 4GB RAM minimum</li>
+                    <li>✅ 50MB free disk space</li>
+                    <li>✅ Internet connection for updates</li>
+                </ul>
             </div>
             
             <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
@@ -248,6 +359,13 @@
         <footer>
             <p>&copy; 2024 Battery Buddy. All rights reserved.</p>
             <p>Built with Flutter for Windows</p>
+            <div style="margin-top: 20px;">
+                <a href="privacy-policy.html" style="color: white; text-decoration: none; margin: 0 10px; opacity: 0.8;">Privacy Policy</a>
+                <span style="opacity: 0.5;">|</span>
+                <a href="terms-of-service.html" style="color: white; text-decoration: none; margin: 0 10px; opacity: 0.8;">Terms of Service</a>
+                <span style="opacity: 0.5;">|</span>
+                <a href="support.html" style="color: white; text-decoration: none; margin: 0 10px; opacity: 0.8;">Support</a>
+            </div>
         </footer>
     </div>
 </body>

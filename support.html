@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Battery Buddy</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            background: linear-gradient(135deg, #f8fff8 0%, #ffffff 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(86, 171, 47, 0.05);
+        }
+        
+        h2 {
+            color: #56ab2f;
+            margin: 30px 0 15px 0;
+            font-size: 1.5rem;
+        }
+        
+        h3 {
+            color: #56ab2f;
+            margin: 25px 0 10px 0;
+            font-size: 1.2rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #a8e6cf 0%, #56ab2f 100%);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .back-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .contact-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #56ab2f;
+        }
+        
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 1px solid rgba(86, 171, 47, 0.1);
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #56ab2f;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .faq-answer {
+            color: #555;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .support-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid rgba(86, 171, 47, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .support-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .support-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .troubleshooting-steps {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .step-number {
+            background: #56ab2f;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Support Center</h1>
+            <p class="subtitle">Battery Buddy - Smart Battery Management</p>
+        </header>
+        
+        <div class="main-content">
+            <a href="index.html" class="back-button">← Back to Home</a>
+            
+            <h2>How Can We Help You?</h2>
+            <p>We're here to help you get the most out of Battery Buddy. Find answers to common questions, troubleshooting guides, and ways to contact our support team.</p>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">❓</div>
+                    <h3>FAQ</h3>
+                    <p>Find answers to frequently asked questions about Battery Buddy features and usage.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">🔧</div>
+                    <h3>Troubleshooting</h3>
+                    <p>Step-by-step guides to resolve common issues and optimize your experience.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">📧</div>
+                    <h3>Contact Us</h3>
+                    <p>Get in touch with our support team for personalized assistance.</p>
+                </div>
+                <div class="support-card">
+                    <div class="support-icon">📚</div>
+                    <h3>User Guide</h3>
+                    <p>Learn how to use all Battery Buddy features effectively.</p>
+                </div>
+            </div>
+            
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does Battery Buddy monitor my battery?</div>
+                <div class="faq-answer">Battery Buddy uses your device's built-in battery APIs to monitor battery level, charging status, and health. The app runs in the background to provide real-time updates and notifications.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Why am I not receiving notifications?</div>
+                <div class="faq-answer">Make sure Battery Buddy has notification permissions enabled in your device settings. Go to Settings > Apps > Battery Buddy > Notifications and ensure notifications are turned on.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Does Battery Buddy drain my battery?</div>
+                <div class="faq-answer">No, Battery Buddy is designed to be lightweight and efficient. It uses minimal system resources and only monitors battery status when necessary. The app itself consumes less than 1% of your battery.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How accurate are the battery health recommendations?</div>
+                <div class="faq-answer">Our recommendations are based on industry best practices and your device's battery data. However, actual battery performance may vary based on usage patterns and device conditions.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I customize notification settings?</div>
+                <div class="faq-answer">Yes! You can customize notification thresholds, timing, and types in the app settings. Choose when you want to be notified about low battery, charging completion, and other events.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is my data safe with Battery Buddy?</div>
+                <div class="faq-answer">Absolutely! Battery Buddy stores all your data locally on your device. We don't upload or share your personal information. See our <a href="privacy-policy.html" style="color: #56ab2f;">Privacy Policy</a> for more details.</div>
+            </div>
+            
+            <h2>Troubleshooting Guide</h2>
+            
+            <div class="troubleshooting-steps">
+                <h3>Common Issues and Solutions</h3>
+                
+                <h4>Notifications Not Working</h4>
+                <p><span class="step-number">1</span>Check if Battery Buddy has notification permissions</p>
+                <p><span class="step-number">2</span>Restart the app</p>
+                <p><span class="step-number">3</span>Check your device's Do Not Disturb settings</p>
+                <p><span class="step-number">4</span>Update to the latest version of Battery Buddy</p>
+                
+                <h4>App Not Starting</h4>
+                <p><span class="step-number">1</span>Restart your device</p>
+                <p><span class="step-number">2</span>Uninstall and reinstall Battery Buddy</p>
+                <p><span class="step-number">3</span>Check if your device meets minimum requirements</p>
+                <p><span class="step-number">4</span>Clear app cache and data</p>
+                
+                <h4>Battery Information Not Updating</h4>
+                <p><span class="step-number">1</span>Ensure Battery Buddy has necessary permissions</p>
+                <p><span class="step-number">2</span>Check if battery optimization is disabled for the app</p>
+                <p><span class="step-number">3</span>Restart the app</p>
+                <p><span class="step-number">4</span>Update your device's operating system</p>
+            </div>
+            
+            <h2>Contact Support</h2>
+            
+            <div class="contact-card">
+                <h3>Get in Touch</h3>
+                <p>Our support team is here to help you with any questions or issues you may have with Battery Buddy.</p>
+                
+                <h4>Email Support</h4>
+                <p><strong>General Support:</strong> support@batterybuddy.app</p>
+                <p><strong>Technical Issues:</strong> tech@batterybuddy.app</p>
+                <p><strong>Feature Requests:</strong> feedback@batterybuddy.app</p>
+                
+                <h4>Response Time</h4>
+                <p>We typically respond to support requests within 24-48 hours during business days.</p>
+                
+                <h4>Before Contacting Support</h4>
+                <ul>
+                    <li>Check this FAQ section for your question</li>
+                    <li>Try the troubleshooting steps above</li>
+                    <li>Make sure you're using the latest version of Battery Buddy</li>
+                    <li>Include your device model and operating system version</li>
+                </ul>
+            </div>
+            
+            <h2>User Guide</h2>
+            
+            <h3>Getting Started</h3>
+            <ol>
+                <li><strong>Installation:</strong> Download Battery Buddy from the Microsoft Store</li>
+                <li><strong>Permissions:</strong> Grant necessary permissions for battery monitoring and notifications</li>
+                <li><strong>Setup:</strong> Configure your notification preferences in the app settings</li>
+                <li><strong>Monitor:</strong> Start monitoring your battery health and usage patterns</li>
+            </ol>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Real-time Monitoring:</strong> Track battery level, charging status, and health</li>
+                <li><strong>Smart Notifications:</strong> Get alerts for low battery, charging completion, and health tips</li>
+                <li><strong>Usage Statistics:</strong> View detailed battery usage patterns and trends</li>
+                <li><strong>Health Insights:</strong> Receive recommendations for optimal battery care</li>
+            </ul>
+            
+            <h3>Tips for Best Experience</h3>
+            <ul>
+                <li>Keep Battery Buddy running in the background for continuous monitoring</li>
+                <li>Customize notification thresholds based on your usage patterns</li>
+                <li>Regularly check battery health insights for optimal performance</li>
+                <li>Update the app regularly for the latest features and improvements</li>
+            </ul>
+            
+            <div class="contact-card">
+                <h3>Still Need Help?</h3>
+                <p>If you couldn't find the answer you're looking for, don't hesitate to contact our support team. We're here to help you get the most out of Battery Buddy!</p>
+                <p><strong>Email:</strong> support@batterybuddy.app</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Battery Buddy. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 

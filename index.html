@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Buddy - Smart Battery Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .feature h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .screenshot {
+            background: #f0f0f0;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <img src="https://raw.githubusercontent.com/yourusername/battery-buddy-app/main/logo.png" alt="Battery Buddy Logo" style="width: 80px; height: 80px; margin-right: 20px; border-radius: 15px;">
+                <h1>🔋 Battery Buddy</h1>
+            </div>
+            <p class="subtitle">Smart Battery Management for Your Device</p>
+        </header>
+        
+        <div class="main-content">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #333;">Keep Your Battery Healthy and Informed</h2>
+            
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 40px; color: #666;">
+                Battery Buddy is your intelligent companion for monitoring and managing your device's battery health. 
+                Get timely notifications, track battery usage, and optimize your charging habits for longer battery life.
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Smart Notifications</h3>
+                    <p>Receive timely alerts when your battery is low or fully charged to prevent overcharging and preserve battery health.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Track your battery level, charging status, and usage patterns in real-time with an intuitive interface.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Battery Optimization</h3>
+                    <p>Get recommendations and insights to extend your battery life and maintain optimal performance.</p>
+                </div>
+            </div>
+            
+            <div class="screenshots">
+                <div class="screenshot">
+                    <div>
+                        <h4>Main Dashboard</h4>
+                        <p>Clean, modern interface showing battery status</p>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div>
+                        <h4>Notifications</h4>
+                        <p>Smart alerts for battery management</p>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div>
+                        <h4>Settings</h4>
+                        <p>Customize your battery monitoring preferences</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta">
+                <h3 style="margin-bottom: 20px;">Ready to Optimize Your Battery Life?</h3>
+                <a href="#" class="cta-button">Download from Microsoft Store</a>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                <h4 style="margin-bottom: 15px;">Key Features</h4>
+                <ul style="list-style: none; text-align: left; max-width: 500px; margin: 0 auto;">
+                    <li>✅ Real-time battery level monitoring</li>
+                    <li>✅ Smart charging notifications</li>
+                    <li>✅ Low battery alerts</li>
+                    <li>✅ Battery health insights</li>
+                    <li>✅ Clean, modern UI</li>
+                    <li>✅ Lightweight and efficient</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Battery Buddy. All rights reserved.</p>
+            <p>Built with Flutter for Windows</p>
+        </footer>
+    </div>
+</body>
+</html> 

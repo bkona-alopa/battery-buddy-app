@@ -265,6 +265,87 @@
             left: 100%;
         }
         
+        .system-tray-preview {
+            background: #2d2d2d;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border: 1px solid #444;
+        }
+        
+        .system-tray-container {
+            display: inline-block;
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 15px 20px;
+            border: 1px solid #444;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+            margin: 20px 0;
+        }
+        
+        .system-tray-icons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        .tray-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #4facfe 0%, #56ab2f 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .tray-icon.battery {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+        }
+        
+        .tray-icon:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .tray-tooltip {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .tray-icon:hover .tray-tooltip {
+            opacity: 1;
+        }
+        
+        .tray-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #333;
+        }
+        
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -276,6 +357,16 @@
             
             .features {
                 grid-template-columns: 1fr;
+            }
+            
+            .system-tray-container {
+                padding: 10px 15px;
+            }
+            
+            .tray-icon {
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
             }
         }
     </style>
@@ -338,24 +429,35 @@
                 </div>
             </div>
             
+            <div class="system-tray-preview">
+                <h3 style="color: white; margin-bottom: 20px; font-size: 1.5rem;">Seamless System Tray Integration</h3>
+                <p style="color: #ccc; margin-bottom: 30px; font-size: 1.1rem;">Battery Buddy runs quietly in your system tray, providing instant access to battery information without cluttering your desktop.</p>
+                
+                <div class="system-tray-container">
+                    <div class="system-tray-icons">
+                        <div class="tray-icon battery">
+                            <img src="batteryBuddy-icon.ico" alt="Battery Buddy" style="width: 16px; height: 16px; object-fit: contain;">
+                            <div class="tray-tooltip">Battery Buddy - 65%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px; color: #ccc;">
+                    <p style="margin-bottom: 10px;"><strong>Hover over the battery icon to see real-time status</strong></p>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Click to open detailed battery information and settings</p>
+                </div>
+            </div>
+            
 
             
             <div class="cta">
                 <h3 style="margin-bottom: 20px;">Ready to Optimize Your Battery Life?</h3>
                 <p style="color: #666; margin-bottom: 25px;">Experience smart battery management with Battery Buddy</p>
-                <a href="#" class="cta-button">Coming Soon to Microsoft Store</a>
+                <a href="https://apps.microsoft.com/store/detail/9NTG5ZQLXV0M?cid=DevShareMCLPCS" class="cta-button" target="_blank" rel="noopener noreferrer">Download from Microsoft Store</a>
                 <p style="font-size: 0.9rem; color: #999; margin-top: 15px;">Free • No ads • Privacy focused</p>
             </div>
             
-            <div style="text-align: center; margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px; border: 1px solid rgba(79, 172, 254, 0.1);">
-                <h4 style="margin-bottom: 15px; color: #4facfe;">Get Notified When We Launch!</h4>
-                <p style="color: #666; margin-bottom: 20px;">Be the first to know when Battery Buddy becomes available</p>
-                <div style="display: flex; max-width: 400px; margin: 0 auto; gap: 10px;">
-                    <input type="email" placeholder="Enter your email" style="flex: 1; padding: 12px 15px; border: 1px solid #ddd; border-radius: 25px; font-size: 1rem; outline: none;">
-                    <button style="background: linear-gradient(135deg, #4facfe 0%, #56ab2f 100%); color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; cursor: pointer; transition: transform 0.3s ease;">Notify Me</button>
-                </div>
-                <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">We'll only email you about the launch. No spam, ever.</p>
-            </div>
+
             
             <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
                 <h4 style="margin-bottom: 15px;">System Requirements</h4>
